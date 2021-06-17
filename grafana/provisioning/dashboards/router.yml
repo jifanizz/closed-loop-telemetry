@@ -1,0 +1,14 @@
+# # config file version
+apiVersion: 1
+
+providers:
+ - name: 'Router_Health_Check'
+   orgId: 1
+   folder: 'MDT'
+   type: file
+   editable: true
+   disableDeletion: false
+   allowUiUpdates: true
+   options:
+     datasource: influxdb-mdt
+     path: /etc/grafana/provisioning/dashboards/mdt

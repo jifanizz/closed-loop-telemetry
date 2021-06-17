@@ -1,0 +1,16 @@
+
+apiVersion: 1
+
+notifiers:
+  - name: listener
+    type: webhook
+    uid: UUdhAKgnz
+    # either
+    org_id: 1
+    is_default: true
+    frequency: 1h
+    disable_resolve_message: false
+    # Secure settings that will be encrypted in the database (supported since Grafana v7.2). See `Supported Settings` section for secure settings supported for each notifier.
+    settings:
+      url: http://controller:5000/post-acl-on
+      httpMethod: POST

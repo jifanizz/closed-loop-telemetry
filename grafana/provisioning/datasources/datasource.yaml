@@ -1,0 +1,22 @@
+apiVersion: 1
+
+deleteDatasources:
+  - name: influx-mdt
+    orgId: 1
+
+datasources:
+- name: influx-mdt
+  orgId: 1
+  type: influxdb
+  typeLogoUrl: public/app/plugins/datasource/influxdb/img/influxdb_logo.svg
+  access: proxy
+  url: http://influxdb:8086
+  password: ''
+  user: telegraf
+  database: mdt
+  basicAuth: false
+  isDefault: true
+  jsonData: {}
+  readOnly: false
+
+

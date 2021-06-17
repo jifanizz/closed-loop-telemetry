@@ -1,0 +1,11 @@
+- hosts: ncs540
+  connection: network_cli
+  gather_facts: false
+
+  tasks:
+  - name: Activate ICMP Access-Group In
+    cisco.iosxr.iosxr_config:
+      lines:
+      - ipv4 access-group block-icmp ingress
+      parents: interface GigabitEthernet0/0/0/1
+  
